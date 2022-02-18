@@ -5,6 +5,10 @@
       This is my first vue app!!
     </p>
   </div>
+  <button class="button" v-on:click="count++">
+    This button been pressed {{ count }} times.
+
+  </button>
 </template>
 
 <script>
@@ -13,6 +17,11 @@ export default {
   props: {
     msg: String,
   },
+  data () {
+    return {
+      count: 0
+      }
+	}
 };
 </script>
 
